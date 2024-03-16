@@ -19,12 +19,17 @@ html {
   height: 100%;
 }
 
+body {
+  /* scroll-snap-type: y proximity; */
+}
+
 button:hover {
   cursor: pointer;
 }
 
 section {
   height: 100vh;
+  /* scroll-snap-align: center; */
 }
 
 .section-title {
@@ -192,6 +197,7 @@ section {
   min-width: 400px;
 
   margin: 0 25px;
+  background-color: white;
   border: 1px solid #111111;
   text-align: center;
   padding: 5px;
@@ -209,6 +215,10 @@ section {
   margin: 10px;
   text-align: left;
 }
+.program-element img {
+  align-items: end;
+}
+
 .program-schedule {
   margin-top: 50px;
   text-align: center;
@@ -221,6 +231,12 @@ section {
 .program-schedule span {
   font-weight: bold;
   color: red;
+}
+
+/* TESTIMONIALS */
+
+#testimonials {
+  height: 50vh;
 }
 
 /* FOOTER */
