@@ -29,8 +29,9 @@ button:hover {
   cursor: pointer;
 }
 
-section {
-  height: 100vh;
+section, .section-container {
+  min-height: 100vh;
+  width: 100%;
   /* scroll-snap-align: center; */
 }
 
@@ -74,7 +75,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .popup-container {
-  height: 30%;
+  height: 40%;
   width: 40%;
   min-width: 620px;
   z-index: 1;
@@ -85,6 +86,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin: auto;
   border: none;
   position: fixed;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -102,16 +104,13 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .popup-container p:last-child {
   margin-top: 32px;
+  font-size: 16px;
 }
 
 .age-confirm-btn {
-  position: absolute;
-  bottom: 16px;
-  left: 0;
-  right: 0;
   width: 150px;
   height: 40px;
-  margin: auto;
+  margin: 12px 12px;
 }
 
 /* NAV */
@@ -230,7 +229,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .about-text,
 .about-img-container {
   min-width: 300px;
-  max-width: 600px;
+  max-width: 400px;
   margin: 20px 10vh;
 }
 
@@ -259,7 +258,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .program-element-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin: 0 2rem;
+  padding-bottom: 100px;
+  border-bottom: 1px solid black;
 }
 
 .program-element {
@@ -300,11 +301,13 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-top: 50px;
   text-align: center;
   display: flex;
+  flex-grow: 1;
   gap: 2rem;
 }
 
-.special-schedule {
+.special-schedule, .normal-schedule {
   padding-left: 12px;
+  margin-bottom: 1.5rem;
   border-left: #111111 2px solid;
   flex-grow: 1;
 }
@@ -321,7 +324,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 /* TESTIMONIALS */
 
 #testimonial {
-  height: 45vh;
+  min-height: 400px;
+  height: 300px;
 }
 
 .carousel-container {
@@ -426,7 +430,8 @@ footer {
 
 .footer-img-container {
   margin: 12px auto;
-  width: 17%;
+  width: 50%;
+  max-width: 320px;
   border-bottom: 2px solid #1111115e;
 }
 
