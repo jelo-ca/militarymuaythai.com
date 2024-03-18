@@ -3,10 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muay Thai International</title>
+    <title>Muay Thai Academy International</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/MuayThaiAcademyIcon.png" />
+    <script defer src="script.js"></script>
   </head>
   <body>
+    <dialog class="popup-container">
+      <div>
+        <p>
+          Due to the techniques we teach, focusing on old school Muay Thai
+          rather than sport,
+          <span>we require our students to be 18+ to enroll.</span>
+        </p>
+        <p>
+          By clicking the button below, you understand that there is an age
+          requirement for enrolling in our academy.
+        </p>
+      </div>
+      <button class="age-confirm-btn">I UNDERSTAND</button>
+    </dialog>
     <nav>
       <div class="nav-bar">
         <img
@@ -14,7 +30,9 @@
           alt="Muay Thai Academy Logo"
           class="logo"
         />
+        <!-- <a href="" class="page-title"> -->
         <h2 class="page-title">MUAY THAI <br />ACADEMY INTERNATIONAL</h2>
+        <!-- </a> -->
         <div class="nav-links-container">
           <ul>
             <li><a href="#about" class="nav-links">ABOUT</a></li>
@@ -34,7 +52,9 @@
             </h1>
             <!-- <p class="hero-statements">COMBAT | SURVIVAL | DISCIPLINE</p> -->
           </div>
-          <button class="get-started-btn">JOIN US</button>
+          <a href="#contact">
+            <button class="get-started-btn">JOIN US</button>
+          </a>
         </div>
       </div>
     </section>
@@ -65,7 +85,9 @@
             deserunt id natus architecto corporis ad est officiis ab voluptas
             libero.
           </p>
-          <button class="learn-btn">LEARN MORE</button>
+          <a href="./about.html" target="_blank">
+            <button class="learn-btn">LEARN MORE</button>
+          </a>
         </div>
         <div class="about-img-container">
           <img src="./assets/muaythaiBG.jpg" alt="" class="about-img" />
@@ -123,21 +145,34 @@
           </div>
         </div>
         <div class="program-schedule">
-          <h3>SCHEDULE</h3>
-          <p>
-            <b>Monday through Thursday:</b> 5:00 PM to 9:00 PM
-            <span>Supervised and Instructed Training</span>
-          </p>
-          <p>
-            <b>Friday:</b> 5:00 to 9:00 PM
-            <span>Open Floor Training (unsupervised) </span>
-          </p>
+          <div class="normal-schedule">
+            <h3>MUAY THAI</h3>
+            <p>
+              <b>Monday through Thursday:</b> 5:00 PM to 9:00 PM
+              <span>Supervised and Instructed Training</span>
+            </p>
+            <p>
+              <b>Friday:</b> 5:00 to 9:00 PM
+              <span>Open Floor Training (unsupervised) </span>
+            </p>
 
-          <p><b>Saturday & Sunday: </b>Closed</p>
+            <p><b>Saturday & Sunday: </b>Closed</p>
+          </div>
+          <div class="special-schedule">
+            <h3>SPECIALTIES</h3>
+            <p>
+              <b>Stick and Knife</b>
+            </p>
+            <p>
+              <b>Boxing</b>
+            </p>
+
+            <p><b>CQB</b></p>
+          </div>
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="testimonial">
       <h3 class="section-title">TESTIMONIALS</h3>
       <div class="carousel-container">
         <div class="testimonial-card">
@@ -178,9 +213,29 @@
         </div>
       </div>
     </section>
-    <footer id="footer">
+    <footer id="contact">
       <div class="contact-container">
+        <div class="contact-form-container">
+          <h2>SCHEDULE AN APPOINTMENT</h2>
+          <form action="" class="contact-form">
+            <input type="text" placeholder="Name" class="name" />
+            <div class="customer-info">
+              <input type="number" name="" id="" placeholder="Phone" />
+              <input type="email" placeholder="Email" />
+            </div>
+            <textarea
+              name="message"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Type your message here"
+              class="message"
+            ></textarea>
+            <button>SUBMIT</button>
+          </form>
+        </div>
         <div class="contact-info">
+          <h2>CONTACT US</h2>
           <ul>
             <li>
               <img
@@ -205,16 +260,6 @@
               320 Martin Ave, Suite D, Santa Clara, CA 95050
             </li>
           </ul>
-        </div>
-        <div class="contact-form-container">
-          <form action="" class="contact-form">
-            <input type="text" placeholder="Name" />
-            <div class="customer-info">
-              <input type="number" name="" id="" placeholder="Phone" />
-              <input type="email" placeholder="Email" />
-            </div>
-            <textarea name="message" id="" cols="30" rows="10"></textarea>
-          </form>
         </div>
       </div>
       <div class="footer-nav">

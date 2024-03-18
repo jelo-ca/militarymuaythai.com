@@ -14,6 +14,12 @@ WHITE ededed */
   text-decoration: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -26,6 +32,20 @@ button:hover {
 section {
   height: 100vh;
   /* scroll-snap-align: center; */
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  font-weight: 800;
+  background-color: rgba(255, 255, 255, 0.781);
+  border-radius: 0.2rem;
+}
+
+button:hover {
+  transition: all 200ms ease;
+  background-color: red;
+  color: white;
 }
 
 .section-title {
@@ -48,6 +68,52 @@ body::-webkit-scrollbar-thumb {
   background: #252422;
 }
 
+/* POPUP */
+dialog:-internal-dialog-in-top-layer::backdrop {
+  background-color: #11111198;
+}
+
+.popup-container {
+  height: 30%;
+  width: 40%;
+  min-width: 620px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  position: fixed;
+  text-align: center;
+}
+
+.popup-container div {
+  margin: 16px;
+}
+
+.popup-container p {
+  font-size: 24px;
+}
+
+.popup-container span {
+  font-weight: bold;
+  color: red;
+}
+.popup-container p:last-child {
+  margin-top: 32px;
+}
+
+.age-confirm-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  width: 150px;
+  height: 40px;
+  margin: auto;
+}
+
 /* NAV */
 .nav-bar {
   display: flex;
@@ -65,7 +131,8 @@ body::-webkit-scrollbar-thumb {
   color: #111111;
 }
 
-.page-title {
+.page-title,
+.page-title h2 {
   font-weight: 100;
   margin: auto;
   font-size: 1.2rem;
@@ -97,7 +164,7 @@ body::-webkit-scrollbar-thumb {
 
 /* HERO SECTION */
 #hero {
-  /* background-image: url("./assets/muaythaiBG.jpg"); */
+  background-image: url("./assets/MuayThaiBackground.jpeg");
   background-color: whitesmoke;
   height: 100vh;
   background-position: center;
@@ -126,6 +193,8 @@ body::-webkit-scrollbar-thumb {
 
 .hero-title {
   border: 12px solid #ededed;
+  color: #ededed;
+  background-color: #11111160;
   padding: 1rem;
   text-align: center;
   margin: 20px;
@@ -145,19 +214,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 24px;
   font-weight: bold;
 }
-.get-started-btn {
-  height: 50px;
-  padding: 12px;
-  font-weight: 800;
-  background-color: white;
-  border-radius: 0.2rem;
-}
 
-.get-started-btn:hover {
-  transition: all 200ms ease;
-  background-color: red;
-  color: white;
-}
 /* ABOUT US */
 #about {
   display: flex;
@@ -186,8 +243,8 @@ body::-webkit-scrollbar-thumb {
 
 .learn-btn {
   margin: 20px 40%;
-  padding: 10px;
   height: 40px;
+  width: 120px;
   white-space: nowrap;
 }
 
@@ -242,6 +299,14 @@ body::-webkit-scrollbar-thumb {
 .program-schedule {
   margin-top: 50px;
   text-align: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.special-schedule {
+  padding-left: 12px;
+  border-left: #111111 2px solid;
+  flex-grow: 1;
 }
 
 .program-schedule p {
@@ -255,8 +320,8 @@ body::-webkit-scrollbar-thumb {
 
 /* TESTIMONIALS */
 
-#contact {
-  height: 40vh;
+#testimonial {
+  height: 45vh;
 }
 
 .carousel-container {
@@ -285,7 +350,7 @@ body::-webkit-scrollbar-thumb {
 
 /* FOOTER */
 footer {
-  height: 60vh;
+  height: auto;
   background-color: whitesmoke;
   justify-content: center;
   align-items: center;
@@ -295,11 +360,18 @@ footer {
 .contact-container {
   display: flex;
   justify-content: space-around;
+  text-align: center;
+}
+
+.contact-container h2 {
+  margin-bottom: 20px;
 }
 
 .contact-info ul {
   display: flex;
   flex-direction: column;
+  width: 500px;
+  margin: auto;
 }
 .contact-info li {
   margin: 1rem;
@@ -317,10 +389,39 @@ footer {
   flex-grow: 1;
 }
 
+/* form */
+.name,
+.customer-info,
+.message,
+.contact-form {
+  width: 500px;
+}
+
 .contact-form {
   text-align: center;
-  width: 50%;
-  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.contact-form input,
+.message {
+  padding: 12px 10px;
+}
+
+.customer-info {
+  display: flex;
+}
+
+.customer-info input {
+  flex-grow: 1;
+}
+
+.contact-form button {
+  width: 150px;
+  height: 25px;
+  margin: 12px auto;
 }
 
 .footer-img-container {
