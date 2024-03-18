@@ -29,7 +29,8 @@ button:hover {
   cursor: pointer;
 }
 
-section, .section-container {
+section,
+.section-container {
   min-height: 100vh;
   width: 100%;
   /* scroll-snap-align: center; */
@@ -223,18 +224,27 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-grow: 1;
 }
 
 .about-text,
 .about-img-container {
   min-width: 300px;
-  max-width: 400px;
-  margin: 20px 10vh;
+  max-width: none;
+  width: 50%;
+  margin: 20px 2rem;
+}
+
+.about-img-container {
+  text-align: center;
+}
+.about-img-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 .about-text p {
-  margin-top: 20px;
+  margin: 20px;
+  padding: 1rem;
 }
 .about-img {
   margin-top: 20px;
@@ -252,22 +262,25 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background-color: whitesmoke;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.program-container {
+  padding: 2rem;
 }
 
 .program-element-container {
   display: flex;
   justify-content: center;
-  margin: 0 2rem;
+  margin: 2rem 2rem;
   padding-bottom: 100px;
   border-bottom: 1px solid black;
 }
 
 .program-element {
-  min-height: 400px;
-  max-height: 400px;
-  max-width: 400px;
-  min-width: 400px;
+  min-height: 350px;
+  min-width: 350px;
+  max-height: 350px;
+  max-width: 350px;
 
   position: relative;
   margin: 0 25px;
@@ -305,15 +318,19 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   gap: 2rem;
 }
 
-.special-schedule, .normal-schedule {
+.special-schedule,
+.normal-schedule {
   padding-left: 12px;
   margin-bottom: 1.5rem;
-  border-left: #111111 2px solid;
   flex-grow: 1;
 }
 
 .program-schedule p {
   margin: 20px 0;
+}
+
+.normal-schedule {
+  border-right: #111111 2px solid;
 }
 
 .program-schedule span {
@@ -333,8 +350,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   height: 250px;
   margin: auto auto;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-x: auto;
   gap: 2rem;
   scroll-snap-type: x mandatory;
 }
@@ -418,6 +434,10 @@ footer {
   display: flex;
 }
 
+.contact-info,
+.contact-form-container {
+  padding: 2rem;
+}
 .customer-info input {
   flex-grow: 1;
 }
