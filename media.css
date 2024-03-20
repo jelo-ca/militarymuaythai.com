@@ -1,0 +1,133 @@
+@media (max-width: 1000px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-container div {
+    width: 100%;
+  }
+
+  .about-text,
+  .about-img-container {
+    margin: auto;
+  }
+  .program-element-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding-bottom: 2rem;
+    border: none;
+  }
+
+  .program-schedule {
+    display: block;
+  }
+  .normal-schedule {
+    border-right: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form-container {
+    align-self: center;
+  }
+  .name,
+  .customer-info,
+  .message,
+  .contact-form {
+    min-width: 200px;
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    margin: 10px;
+  }
+
+  .section-title {
+    font-size: 44px;
+  }
+  /* #testimonial h3 {
+    font-size: 32px;
+  } */
+
+  .contact-info li {
+    width: 90%;
+  }
+
+  .contact-info ul {
+    min-width: 300px;
+  }
+
+  footer {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-links-container {
+    display: none;
+  }
+  .hamburger-nav-links-container {
+    display: block;
+    position: fixed;
+    right: -100%;
+    top: 10vh;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    height: 170px;
+    transition: 0.1s;
+    z-index: 1;
+  }
+
+  .hamburger-nav-links-container.active {
+    right: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  .hamburger-nav-links-container.active li {
+    display: block;
+  }
+  .hamburger-nav-links-container.active ul {
+    margin: 0 auto;
+  }
+
+  .hamburger-nav-links-container li {
+    margin: 16px 0;
+  }
+
+  .page-title {
+    text-align: left;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-bar img {
+    display: none;
+  }
+
+  .nav-bar h2 {
+    margin-left: 1.5rem;
+  }
+}

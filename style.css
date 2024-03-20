@@ -76,7 +76,6 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .popup-container {
-  height: 40%;
   width: 40%;
   min-width: 620px;
   z-index: 1;
@@ -116,9 +115,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 /* NAV */
 .nav-bar {
+  position: fixed;
+  width: 100%;
+  background-color: white;
   display: flex;
-  flex-direction: row;
   height: 10vh;
+  z-index: 1;
 }
 
 .logo {
@@ -134,8 +136,31 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .page-title,
 .page-title h2 {
   font-weight: 100;
-  margin: auto;
+  margin: auto 0px;
   font-size: 1.2rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  align-self: center;
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+
+.bar {
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin: 10px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+.hamburger-nav-links-container {
+  display: none;
 }
 .nav-links-container {
   flex-grow: 1;
@@ -197,8 +222,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background-color: #11111160;
   padding: 1rem;
   text-align: center;
-  margin: 20px;
-  min-width: 500px;
+  margin: auto;
+  min-width: 100px;
 }
 
 .hero-title-text {
@@ -215,6 +240,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-weight: bold;
 }
 
+.get-started-btn {
+  margin-top: 1rem;
+}
 /* ABOUT US */
 #about {
   display: flex;
@@ -232,6 +260,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   max-width: none;
   width: 50%;
   margin: 20px 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .about-img-container {
@@ -247,11 +277,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
 }
 .about-img {
-  margin-top: 20px;
+  margin: 10px 0;
 }
 
 .learn-btn {
-  margin: 20px 40%;
+  text-align: center;
+  margin: 20px auto;
   height: 40px;
   width: 120px;
   white-space: nowrap;
@@ -277,10 +308,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .program-element {
-  min-height: 350px;
-  min-width: 350px;
-  max-height: 350px;
-  max-width: 350px;
+  max-width: 400px;
+  min-width: 300px;
+  min-height: 300px;
 
   position: relative;
   margin: 0 25px;
@@ -291,6 +321,11 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.322);
 }
 
+.program-element::after {
+  content: "";
+  display: block;
+  padding-bottom: 50%;
+}
 .program-element h3,
 .program-schedule h3 {
   text-decoration: underline 3px;
@@ -314,7 +349,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-top: 50px;
   text-align: center;
   display: flex;
-  flex-grow: 1;
+  justify-content: space-around;
   gap: 2rem;
 }
 
@@ -390,7 +425,7 @@ footer {
 .contact-info ul {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  max-width: 500px;
   margin: auto;
 }
 .contact-info li {
@@ -436,7 +471,7 @@ footer {
 
 .contact-info,
 .contact-form-container {
-  padding: 2rem;
+  padding: 1rem;
 }
 .customer-info input {
   flex-grow: 1;
@@ -458,9 +493,19 @@ footer {
 .footer-nav {
   text-align: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 footer li {
   display: inline;
   margin: 20px;
+}
+
+.copyright {
+  font-size: 12px;
+  padding: 12px;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(145, 145, 145);
 }
