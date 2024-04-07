@@ -36,11 +36,19 @@ carouselButton.forEach((button) => {
       .querySelector(".carousel");
 
     const activeSlide = slides.querySelector("[data-active]");
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    const nextSlide = slides.querySelector("[data-next]");
+    const prevSlide = slides.querySelector("[data-prev]");
+
+    let newIndex = [...slides.children].indexOf(nextSlide) + offset;
     if (newIndex < 0) newIndex = slides.children.length - 1;
     if (newIndex >= slides.children.length) newIndex = 0;
 
-    slides.children[newIndex].dataset.active = true;
+    delete nextSlide.dataset.next;
+    delete prevSlide.dataset.prev;
     delete activeSlide.dataset.active;
+
+    activeSlide.dataset.prev = true;
+    nextSlide.dataset.active = true;
+    slides.children[newIndex].dataset.next = true;
   });
 });
