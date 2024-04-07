@@ -102,7 +102,7 @@
             <button class="learn-btn">LEARN MORE</button>
           </a>
         </div>
-        <div class="about-img-container">
+        <div class="about-img-container hidden">
           <img src="./assets/muaythaiBG.jpg" alt="" class="about-img" />
           <img src="./assets/muaythaiBG.jpg" alt="" class="about-img" />
         </div>
@@ -112,7 +112,7 @@
       <div class="program-container section-container">
         <h2 class="section-title">OUR PROGRAM</h2>
         <div class="program-element-container">
-          <div class="program-element">
+          <div class="program-element hidden">
             <h3>CORE EDUCATION</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
@@ -126,7 +126,7 @@
               class="program-icon"
             />
           </div>
-          <div class="program-element">
+          <div class="program-element hidden">
             <h3>DAILY TRAINING</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
@@ -141,7 +141,7 @@
               class="program-icon"
             />
           </div>
-          <div class="program-element">
+          <div class="program-element hidden">
             <h3>DEVELOPMENT</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
@@ -188,42 +188,65 @@
     <section id="testimonial">
       <h3 class="section-title">TESTIMONIALS</h3>
       <div class="carousel-container">
-        <div class="testimonial-card">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quidem labore beatae pariatur esse natus sunt quis corrupti deleniti
-            doloremque.
-          </p>
-        </div>
-        <div class="testimonial-card">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            eaque dicta assumenda. Reprehenderit quae est ipsum error blanditiis
-            ullam delectus nobis accusamus, impedit asperiores voluptatibus
-            suscipit, aut accusantium repellat repellendus?
-          </p>
-        </div>
-        <div class="testimonial-card">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quidem labore beatae pariatur esse natus sunt quis corrupti deleniti
-            doloremque.
-          </p>
-        </div>
-        <div class="testimonial-card">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quidem labore beatae pariatur esse natus sunt quis corrupti deleniti
-            doloremque.
-          </p>
-        </div>
-        <div class="testimonial-card">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quidem labore beatae pariatur esse natus sunt quis corrupti deleniti
-            doloremque.
-          </p>
-        </div>
+        <button class="carousel-btn prev" data-carousel-btn="prev"><</button>
+        <button class="carousel-btn next" data-carousel-btn="next">></button>
+        <ul class="carousel">
+          <li class="slide" data-active>
+            <div class="testimonial-card">
+              <p>
+                1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus eaque dicta assumenda. Reprehenderit quae est ipsum
+                error blanditiis ullam delectus nobis accusamus, impedit
+                asperiores voluptatibus suscipit, aut accusantium repellat
+                repellendus?
+              </p>
+            </div>
+          </li>
+          <li class="slide">
+            <div class="testimonial-card">
+              <p>
+                2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus eaque dicta assumenda. Reprehenderit quae est ipsum
+                error blanditiis ullam delectus nobis accusamus, impedit
+                asperiores voluptatibus suscipit, aut accusantium repellat
+                repellendus?
+              </p>
+            </div>
+          </li>
+          <li class="slide">
+            <div class="testimonial-card">
+              <p>
+                3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus eaque dicta assumenda. Reprehenderit quae est ipsum
+                error blanditiis ullam delectus nobis accusamus, impedit
+                asperiores voluptatibus suscipit, aut accusantium repellat
+                repellendus?
+              </p>
+            </div>
+          </li>
+          <li class="slide">
+            <div class="testimonial-card">
+              <p>
+                4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus eaque dicta assumenda. Reprehenderit quae est ipsum
+                error blanditiis ullam delectus nobis accusamus, impedit
+                asperiores voluptatibus suscipit, aut accusantium repellat
+                repellendus?
+              </p>
+            </div>
+          </li>
+          <li class="slide">
+            <div class="testimonial-card">
+              <p>
+                5 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus eaque dicta assumenda. Reprehenderit quae est ipsum
+                error blanditiis ullam delectus nobis accusamus, impedit
+                asperiores voluptatibus suscipit, aut accusantium repellat
+                repellendus?
+              </p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <footer id="contact">
@@ -293,7 +316,7 @@
     <div class="copyright">
       <p>
         &copy 2024 Muay Thai Academy International | 320 Martin Ave, Suite D,
-        Santa Clara, CA 95050 | (408) 216-0004;
+        Santa Clara, CA 95050 | (408) 216-0004
       </p>
     </div>
   </body>
