@@ -7,312 +7,65 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
     <link rel="icon" href="./assets/MuayThaiAcademyIcon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <dialog class="popup-container">
-      <div class="popup-text">
-        <p>
-          Due to the techniques we teach,
-          <span>we require our students to be 18+ to enroll.</span>
-        </p>
-        <p>
-          By clicking the button below, you understand that there is an age
-          requirement for enrolling in our academy.
-        </p>
-      </div>
-      <button class="age-confirm-btn">I UNDERSTAND</button>
-    </dialog>
-    <nav>
-      <div class="nav-bar">
+    <nav class="navbar">
+      <a href="" class="nav-link">ABOUT US</a>
+      <a href="" class="nav-link">PROGRAM</a>
+      <div class="academy-logo">
         <img
-          src="./assets/MuayThaiAcademyIcon.png"
-          alt="Muay Thai Academy Logo"
-          class="logo"
+          src="/assets/MuayThaiAcademyIcon.png"
+          alt="academy logo"
+          class="academy-logo-img"
         />
-        <!-- <a href="" class="page-title"> -->
-        <h2 class="page-title">MUAY THAI <br />ACADEMY INTERNATIONAL</h2>
-        <!-- </a> -->
-        <div class="nav-links-container">
-          <ul>
-            <li><a href="#about" class="nav-links">ABOUT</a></li>
-            <li><a href="#program" class="nav-links">PROGRAM</a></li>
-            <li><a href="#faq" class="nav-links">FAQ</a></li>
-            <li><a href="#contact" class="nav-links">CONTACT US</a></li>
-          </ul>
-        </div>
-        <div class="hamburger-nav-links-container">
-          <ul>
-            <li><a href="#about" class="nav-links">ABOUT</a></li>
-            <li><a href="#program" class="nav-links">PROGRAM</a></li>
-            <li><a href="#faq" class="nav-links">FAQ</a></li>
-            <li><a href="#contact" class="nav-links">CONTACT US</a></li>
-          </ul>
-        </div>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
       </div>
+      <a href="" class="nav-link">FAQ</a>
+      <a href="" class="nav-link">CONTACT US</a>
     </nav>
+    <h1 class="academy-name">MUAY THAI<br />ACADEMY INTERNATIONAL</h1>
     <section id="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <div class="hero-title">
-            <h1 class="hero-title-text">
-              MUAY THAI <span><br />ACADEMY <br />INTERNATIONAL</span>
-            </h1>
-            <!-- <p class="hero-statements">COMBAT | SURVIVAL | DISCIPLINE</p> -->
-          </div>
-          <a href="#contact">
-            <button class="get-started-btn">JOIN US</button>
-          </a>
-        </div>
+      <h2 class="slogan"><span>Unleash</span> Your Potential</h2>
+      <p>Let us turn you into a warrior</p>
+      <button class="start-journey-btn">START YOUR JOURNEY</button>
+      <div class="hero-img-container">
+        <!-- <img src="" alt="" class="hero-img" />
+        <img src="" alt="" class="hero-img" />
+        <img src="" alt="" class="hero-img" /> -->
+        <div class="placeholder-img"></div>
+        <div class="placeholder-img"></div>
+        <div class="placeholder-img"></div>
       </div>
     </section>
     <section id="about">
-      <div class="about-container section-container">
-        <div class="about-text">
-          <h2 class="section-title">About Us</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
-            tempora pariatur, officiis accusantium nihil, odio iusto explicabo
-            doloremque esse aliquid quasi. Cumque quidem, ipsam odit libero
-            cupiditate minus nostrum officia.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
-            unde ut consequuntur voluptatem harum praesentium repellendus
-            doloremque, alias necessitatibus voluptate eum consectetur
-            reiciendis minima laudantium fuga aliquid accusamus et dolorem!
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui ex
-            nostrum omnis reiciendis, assumenda voluptatibus! Architecto
-            quibusdam quas, harum nemo amet dolore ab, ducimus error fuga, iure
-            suscipit cum quam.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
-            deserunt id natus architecto corporis ad est officiis ab voluptas
-            libero.
-          </p>
-          <a href="./about.html" target="_blank">
-            <button class="learn-btn">LEARN MORE</button>
-          </a>
-        </div>
-        <div class="about-img-container hidden">
-          <img src="./assets/muaythaiBG.jpg" alt="" class="about-img" />
-          <img src="./assets/muaythaiBG.jpg" alt="" class="about-img" />
-        </div>
+      <div class="about-text-container">
+        <h2>ABOUT US</h2>
+        <p>
+          Established in 1990, <span>Muay Thai Academy International</span> is
+          one of the United States' oldest active Muay Thai academies.
+        </p>
+        <p>
+          We specialize in offensive combat and defensive tactics, serving
+          civilians, law enforcement, military personnel, and high-risk
+          operations specialists.
+        </p>
+        <button class="learn-more-btn">LEARN MORE</button>
       </div>
+      <img src="/assets/muaythaiBG.jpg" alt="" class="about-img" />
     </section>
     <section id="program">
-      <div class="program-container section-container">
-        <h2 class="section-title">OUR PROGRAM</h2>
-        <div class="program-element-container">
-          <div class="program-element hidden">
-            <h3>CORE EDUCATION</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              maxime, totam voluptate vitae soluta unde! Error optio, eaque
-              incidunt mollitia perferendis corporis possimus perspiciatis
-              exercitationem. Exercitationem minima mollitia dolore dignissimos.
-            </p>
-            <img
-              src="./assets/muay-thai-icon1.jpg"
-              alt="muay-thai-icon3"
-              class="program-icon"
-            />
-          </div>
-          <div class="program-element hidden">
-            <h3>DAILY TRAINING</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              maxime, totam voluptate vitae soluta unde! Error optio, eaque
-              incidunt mollitia perferendis corporis possimus perspiciatis
-              exercitationem. Exercitationem minima mollitia dolore dignissimos.
-            </p>
-
-            <img
-              src="./assets/muay-thai-icon2.jpg"
-              alt="muay-thai-icon2"
-              class="program-icon"
-            />
-          </div>
-          <div class="program-element hidden">
-            <h3>DEVELOPMENT</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              maxime, totam voluptate vitae soluta unde! Error optio, eaque
-              incidunt mollitia perferendis corporis possimus perspiciatis
-              exercitationem. Exercitationem minima mollitia dolore dignissimos.
-            </p>
-
-            <img
-              src="./assets/muay-thai-icon3.jpg"
-              alt="muay-thai-icon3"
-              class="program-icon"
-            />
-          </div>
-        </div>
-        <div class="program-schedule">
-          <div class="normal-schedule">
-            <h3>MUAY THAI</h3>
-            <p>
-              <b>Monday through Thursday:</b> 5:00 PM to 9:00 PM
-              <span>Supervised and Instructed Training</span>
-            </p>
-            <p>
-              <b>Friday:</b> 5:00 to 9:00 PM
-              <span>Open Floor Training (unsupervised) </span>
-            </p>
-
-            <p><b>Saturday & Sunday: </b>Closed</p>
-          </div>
-          <div class="special-schedule">
-            <h3>SPECIALTIES</h3>
-            <p>
-              <b>Stick and Knife</b>
-            </p>
-            <p>
-              <b>Boxing</b>
-            </p>
-
-            <p><b>CQB</b></p>
-          </div>
-        </div>
+      <h2>OUR PROGRAM</h2>
+      <div class="program-card-container">
+        <div class="program-card"></div>
+        <div class="program-card"></div>
+        <div class="program-card"></div>
       </div>
     </section>
-    <section id="testimonial">
-      <h3 class="section-title">TESTIMONIALS</h3>
-      <div class="carousel-container">
-        <button class="carousel-btn prev" data-carousel-btn="prev"><</button>
-        <button class="carousel-btn next" data-carousel-btn="next">></button>
-        <ul class="carousel">
-          <li class="slide" data-active>
-            <div class="testimonial-card">
-              <h3>1</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Laborum, sit aliquid repellendus sapiente culpa aspernatur
-                quibusdam ipsum ducimus velit architecto.
-              </p>
-            </div>
-          </li>
-          <li class="slide" data-next>
-            <div class="testimonial-card">
-              <h3>2</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Laborum, sit aliquid repellendus sapiente culpa aspernatur
-                quibusdam ipsum ducimus velit architecto.
-              </p>
-            </div>
-          </li>
-          <li class="slide">
-            <div class="testimonial-card">
-              <h3>3</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Laborum, sit aliquid repellendus sapiente culpa aspernatur
-                quibusdam ipsum ducimus velit architecto.
-              </p>
-            </div>
-          </li>
-          <li class="slide">
-            <div class="testimonial-card">
-              <h3>4</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Laborum, sit aliquid repellendus sapiente culpa aspernatur
-                quibusdam ipsum ducimus velit architecto.
-              </p>
-            </div>
-          </li>
-          <li class="slide" data-prev>
-            <div class="testimonial-card">
-              <h3>5</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Laborum, sit aliquid repellendus sapiente culpa aspernatur
-                quibusdam ipsum ducimus velit architecto.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <footer id="contact">
-      <div class="contact-container">
-        <div class="contact-form-container">
-          <h2>SCHEDULE AN APPOINTMENT</h2>
-          <form action="" class="contact-form">
-            <input type="text" placeholder="Name" class="name" />
-            <div class="customer-info">
-              <input type="number" name="" id="" placeholder="Phone" />
-              <input type="email" placeholder="Email" />
-            </div>
-            <textarea
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Type your message here"
-              class="message"
-            ></textarea>
-            <button>SUBMIT</button>
-          </form>
-        </div>
-        <div class="contact-info">
-          <h2>CONTACT US</h2>
-          <ul>
-            <li>
-              <img
-                src="./assets/phone-icon.png"
-                alt="Phone icon"
-                class="contact-icon"
-              />(408) 216-0004
-            </li>
-            <li>
-              <img
-                src="./assets/email-icon.png"
-                alt="Email icon"
-                class="contact-icon"
-              />mtinfo@militarymuaythai.com
-            </li>
-            <li>
-              <img
-                src="./assets/address-icon.png"
-                alt="Address icon"
-                class="contact-icon"
-              />
-              320 Martin Ave, Suite D, Santa Clara, CA 95050
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-img-container">
-          <img
-            src="./assets/MuayThaiAcademyIcon.png"
-            alt="Muay Thai Academy Logo"
-            class="logo"
-          />
-        </div>
-        <ul>
-          <li><a href="#about" class="nav-links">ABOUT</a></li>
-          <li><a href="#program" class="nav-links">PROGRAM</a></li>
-          <li><a href="faq" class="nav-links">FAQ</a></li>
-        </ul>
-      </div>
-    </footer>
-    <div class="copyright">
-      <p>
-        &copy 2024 Muay Thai Academy International | 320 Martin Ave, Suite D,
-        Santa Clara, CA 95050 | (408) 216-0004
-      </p>
-    </div>
   </body>
 </html>
