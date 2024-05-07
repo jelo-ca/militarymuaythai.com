@@ -257,31 +257,54 @@ button:hover {
 }
 
 #instructors p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /* TESTIMONIAL */
-.carousel-container{
+.carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 
-.testimonial-card{
+.testimonial-card {
   width: 255px;
   height: 155px;
   background: #222222;
   border-radius: 2rem;
   position: relative;
+  display: grid;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.75rem;
 }
 
-.testimonial-card.main{
+.author {
+  font-weight: bold;
+}
+
+.testimonial-card.main {
   width: 346px;
   height: 210px;
+  font-size: 1rem;
 }
 
-.quotation-mark{
+.testimonial-btn {
+  position: absolute;
+  width: 2rem;
+}
+
+.prev {
+  left: -5%;
+}
+
+.next {
+  right: -5%;
+}
+
+.quotation-mark {
   font-family: "Saira Condensed", sans-serif;
   font-weight: bold;
   font-size: 96px;
@@ -290,19 +313,26 @@ button:hover {
   left: 10%;
   transform: translateY(-35%);
 }
-
 /* CALL TO ACTION */
+#action h2 {
+  margin-bottom: 1rem;
+}
 .cta {
   width: 900px;
 }
 
-.cta p{
+.cta h2 {
+  color: var(--white);
+}
+
+.cta h2 span {
+  color: var(--orange);
+}
+
+.cta p {
   font-size: 20px;
   font-weight: bold;
-  margin-top: 1rem;
-}
-.cta h2 {
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .contact {
@@ -310,6 +340,7 @@ button:hover {
   justify-content: space-evenly;
   gap: 2rem;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -366,7 +397,7 @@ label {
   align-items: center;
 }
 
-.contact-info li p{
+.contact-info li p {
   margin: auto;
 }
 
