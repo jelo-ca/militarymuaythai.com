@@ -50,6 +50,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -143,7 +144,7 @@ button:hover {
 
 .placeholder-img {
   background-color: var(--grey);
-  height: 485px;
+  height: 400px;
   width: 345px;
 }
 
@@ -190,7 +191,7 @@ button:hover {
 
 /* PROGRAM */
 #program h2 {
-  margin-bottom: 82px;
+  margin-bottom: 2rem;
 }
 
 .program-card-container {
@@ -223,7 +224,7 @@ button:hover {
 }
 
 .schedule {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   gap: 4rem;
 }
@@ -259,13 +260,51 @@ button:hover {
   font-size: 2rem;
 }
 
+/* TESTIMONIAL */
+.carousel-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-card{
+  width: 255px;
+  height: 155px;
+  background: #222222;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.testimonial-card.main{
+  width: 346px;
+  height: 210px;
+}
+
+.quotation-mark{
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 96px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateY(-35%);
+}
+
 /* CALL TO ACTION */
 .cta {
   width: 900px;
 }
-.cta h2 {
-  margin-bottom: 56px;
+
+.cta p{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 1rem;
 }
+.cta h2 {
+  margin-bottom: 1rem;
+}
+
 .contact {
   display: flex;
   justify-content: space-evenly;
@@ -323,8 +362,12 @@ label {
   text-align: left;
   display: flex;
   gap: 2rem;
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
   align-items: center;
+}
+
+.contact-info li p{
+  margin: auto;
 }
 
 .contact-icon {
