@@ -59,11 +59,13 @@ h2 {
   font-size: 64px;
 }
 
-button:hover {
+button:hover,
+.submit-btn:hover {
   cursor: pointer;
 }
 
-button {
+button,
+.submit-btn {
   height: 50px;
   font-weight: 400;
   background-color: var(--orange);
@@ -116,6 +118,7 @@ button:hover {
 }
 .slogan {
   font-size: 64px;
+  color: var(--white);
 }
 
 .slogan span {
@@ -124,6 +127,7 @@ button:hover {
 
 #hero p {
   margin: 1rem 0;
+  font-size: 2rem;
 }
 
 .start-journey-btn {
@@ -149,6 +153,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .about-text-container {
@@ -184,6 +189,10 @@ button:hover {
 }
 
 /* PROGRAM */
+#program h2 {
+  margin-bottom: 82px;
+}
+
 .program-card-container {
   display: flex;
   gap: 1rem;
@@ -194,4 +203,138 @@ button:hover {
   width: 345px;
   background-color: #222222;
   border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.program-card h3 {
+  font-size: 32px;
+  position: absolute;
+  top: -1rem;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.program-card p {
+  margin: 2rem auto;
+  font-size: 20px;
+}
+
+.schedule {
+  margin-top: 4rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.hours {
+  color: var(--orange);
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.week {
+  height: 112px;
+}
+.schedule ul {
+  margin: auto;
+}
+
+.schedule li {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  align-items: center;
+  text-align: left;
+  font-size: 20px;
+}
+
+.legend-box {
+  height: 28px;
+}
+
+#instructors p {
+  font-size: 2rem;
+}
+
+/* CALL TO ACTION */
+.cta {
+  width: 900px;
+}
+.cta h2 {
+  margin-bottom: 56px;
+}
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.input {
+  display: block;
+}
+
+.input-wrap {
+  position: relative;
+  height: 37px;
+  margin-bottom: 2rem;
+}
+
+.input-field {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  width: 346px;
+  height: 100%;
+  border-bottom: 0.25rem solid var(--orange);
+}
+
+label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.submit-btn {
+  width: 164px;
+  height: 45px;
+  margin: 0 20%;
+}
+
+.contact-info {
+  width: 367px;
+}
+
+.contact-info li {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+.contact-icon {
+  height: 62px;
+}
+
+/* footer */
+footer {
+  background-color: var(--orange);
+  height: 68px;
+  width: 150%;
+  transform: translateX(-20%);
 }
