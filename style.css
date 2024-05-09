@@ -304,7 +304,7 @@ button:hover {
   right: -5%;
 }
 
-.quotation-mark {
+.testimonial-card.main .quotation-mark {
   font-family: "Saira Condensed", sans-serif;
   font-weight: bold;
   font-size: 96px;
@@ -313,8 +313,18 @@ button:hover {
   left: 10%;
   transform: translateY(-35%);
 }
+
+.quotation-mark {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateY(-35%);
+}
 /* CALL TO ACTION */
-#action h2 {
+#contact h2 {
   margin-bottom: 1rem;
 }
 .cta {
