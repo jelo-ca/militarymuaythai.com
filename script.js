@@ -1,68 +1,37 @@
 // DECODE ANIMATION
-let decodes = document.querySelectorAll(".decode");
-const CHAR_DURATION = 1 / 20;
-const TIMEOUT_DURATION = 0.2;
 
-decodes.forEach((d) => {
-  d.addEventListener("click", animate);
+//TESTIMONIAL CAROUSEL
+const carouselButton = document.querySelectorAll("[data-carousel-btn]");
+
+carouselButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselBtn === "next" ? 1 : -1;
+    const slides = button
+      .closest(".carousel-container")
+      .querySelector(".carousel");
+
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+    delete nextSlide.dataset.next;
+    delete prevSlide.dataset.prev;
+    delete activeSlide.dataset.active;
+
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    let nextIndex = newIndex >= slides.children.length - 1 ? 0 : newIndex + 1;
+    let prevIndex = newIndex - 1;
+
+    if (prevIndex < 0) prevIndex = slides.children.length - 1;
+    if (prevIndex >= slides.children.length) prevIndex = 0;
+
+    console.log("prev: " + prevIndex);
+    console.log("new: " + newIndex);
+    console.log("next: " + nextIndex);
+
+    slides.children[prevIndex].dataset.prev = true;
+    slides.children[newIndex].dataset.active = true;
+    slides.children[nextIndex].dataset.next = true;
+  });
 });
-
-function randomChar() {
-  let str = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*(){}:|<>?[]";
-  let c = str[Math.floor(Math.random() * str.length)];
-  return Math.random() > 0.5 ? c : c.toUpperCase();
-}
-
-function easeIn(x) {
-  return x === 0 ? 0 : Math.pow(2, 10 * x - 10);
-}
-
-function animate(e) {
-  let elem = e.target;
-  elem.style.animation = "";
-
-  let text = elem.innerText;
-
-  elem.style.color = "black";
-  elem.style.pointerEvenets = "none";
-  elem.style.animation = `colorChangeAnimation ${
-    CHAR_DURATION * text.length + TIMEOUT_DURATION
-  }s cubic-bezier(0.7, 0, 0.84, 0)`;
-  elem.style.animationDelay = "0.1s";
-
-  let newText = [];
-
-  for (let i = 0; i < text.length; i++) {
-    newText.push(randomChar());
-  }
-
-  elem.innerHTML = newText.join("");
-
-  let i = 0;
-  let int = setInterval(() => {
-    if (i >= text.length) {
-      clearInterval(int);
-    }
-
-    let t = [];
-
-    let partIndex = text.length - 1 - i;
-    for (let k = 0; k < partIndex; k++) {
-      t.push(randomChar());
-    }
-    for (let k = partIndex; k < text.length; k++) {
-      t.push(text[k]);
-    }
-    let p = easeIn(i / text.length);
-    let tim = setTimeout(() => {
-      if ((p = 1)) {
-        clearTimeout(tim);
-        elem.style.pointerEvenets = "auto";
-        elem.style.color = "#fff";
-      }
-      let upText = t.join("");
-      elem.innerHTML = upText;
-    }, p * TIMEOUT_DURATION * 1000);
-    i++;
-  }, CHAR_DURATION * 1000);
-}

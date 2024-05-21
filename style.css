@@ -37,9 +37,9 @@ body {
 
 html {
   background: var(--black);
-  scroll-behavior: smooth;
   height: 100%;
   scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 section {
@@ -265,7 +265,15 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  position: relative;
+  height: 30vh;
+  width: 100vh;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -281,11 +289,37 @@ button:hover {
   font-size: 0.75rem;
 }
 
+.slide {
+  opacity: 0;
+  position: absolute;
+  transition: 0.5s all ease;
+  transform: scale(50%);
+}
+
+.slide[data-active],
+.slide[data-next],
+.slide[data-prev] {
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+
+.slide[data-active] {
+  transform: scale(100%);
+}
+
+.slide[data-next] {
+  transform: translateX(115%) scale(80%);
+}
+
+.slide[data-prev] {
+  transform: translateX(-115%) scale(80%);
+}
+
 .author {
   font-weight: bold;
 }
 
-.testimonial-card.main {
+.slide[data-active] .testimonial-card {
   width: 346px;
   height: 210px;
   font-size: 1rem;
@@ -297,14 +331,14 @@ button:hover {
 }
 
 .prev {
-  left: -5%;
+  left: 0;
 }
 
 .next {
-  right: -5%;
+  right: 0;
 }
 
-.testimonial-card.main .quotation-mark {
+.slide[data-active] .quotation-mark {
   font-family: "Saira Condensed", sans-serif;
   font-weight: bold;
   font-size: 96px;
@@ -408,7 +442,7 @@ label {
 }
 
 .contact-info li p {
-  margin: auto;
+  margin: auto 0;
 }
 
 .contact-icon {
