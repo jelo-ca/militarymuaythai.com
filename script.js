@@ -11,6 +11,9 @@ carouselButton.forEach((button) => {
       .querySelector(".carousel");
 
     const activeSlide = slides.querySelector("[data-active]");
+    const nextSlide = slides.querySelector("[data-next]");
+    const prevSlide = slides.querySelector("[data-prev]");
+
     let newIndex = [...slides.children].indexOf(activeSlide) + offset;
 
     delete nextSlide.dataset.next;
