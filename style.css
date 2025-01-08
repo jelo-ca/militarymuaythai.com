@@ -292,19 +292,23 @@ button:hover {
 .slide {
   opacity: 0;
   position: absolute;
-  transition: 0.2s all ease;
+  transition: 0.5s all ease;
   transform: scale(50%);
+  z-index: 0;
 }
 
 .slide[data-active],
 .slide[data-next],
 .slide[data-prev] {
   opacity: 1;
-  transition: 0.5s all ease;
+  z-index: 3;
+  transition: .75s all ease;
 }
 
 .slide[data-active] {
   transform: scale(100%);
+  z-index: 4;
+  transition: 1s all ease;
 }
 
 .slide[data-next] {
@@ -328,6 +332,7 @@ button:hover {
 .testimonial-btn {
   position: absolute;
   width: 2rem;
+  z-index: 5;
 }
 
 .prev {
@@ -455,4 +460,72 @@ footer {
   height: 68px;
   width: 150%;
   transform: translateX(-20%);
+}
+
+@media (max-width: 1200px) {
+  *{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .academy-name{
+    font-size: 3rem;
+    margin: 2rem auto;
+    width: auto;
+  }
+
+  .slogan {
+    font-size: 2rem;
+  }
+
+  .div {
+    width: auto;
+    min-height: 100vh;
+  }
+
+  section {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .hours{
+    text-align: center;
+  }
+  .placeholder-img {
+    position:absolute;
+  }
+
+  .program-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-card{
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+  
+  .testimonial-btn{
+    display: none;
+  }
+
+  .input-wrap{
+    width: 200px;
+  }
+
+  .week{
+    scale: 60%;
+  }
+
+  .schedule li {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+  }
 }
