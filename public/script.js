@@ -1,5 +1,3 @@
-// DECODE ANIMATION
-
 //TESTIMONIAL CAROUSEL
 const carouselButton = document.querySelectorAll("[data-carousel-btn]");
 
@@ -37,4 +35,10 @@ carouselButton.forEach((button) => {
     slides.children[newIndex].dataset.active = true;
     slides.children[nextIndex].dataset.next = true;
   });
+});
+
+//  CONTACT FORM SUBMISSION
+const contactForm = document.getElementById("contact-form");
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault();
 });
