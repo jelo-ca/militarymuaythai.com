@@ -146,22 +146,22 @@
       </div>
         <div class="carousel">
           <h2>TESTIMONIALS</h2>
-          <div class="testimonial active">
+          <div class="testimonial" [data-prev]>
             <p>
               "MTIA transformed my life. The training is intense but rewarding."
             </p>
             <cite>- John Doe</cite>
           </div>
-          <div class="testimonial">
+          <div class="testimonial" [data-active]>
             <p>"Best Muay Thai academy in the US. Highly recommend!"</p>
             <cite>- Jane Smith</cite>
           </div>
-          <div class="testimonial">
+          <div class="testimonial" [data-next]>
             <p>"Professional instructors and great community."</p>
             <cite>- Mike Johnson</cite>
           </div>
-          <button class="prev">&lt;</button>
-        <button class="next">&gt;</button>
+          <button class="prev" data-carousel-btn="prev">&lt;</button>
+        <button class="next" data-carousel-btn="next">&gt;</button>
         </div>
         
       </div>

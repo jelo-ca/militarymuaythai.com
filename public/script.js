@@ -4,9 +4,7 @@ const carouselButton = document.querySelectorAll("[data-carousel-btn]");
 carouselButton.forEach((button) => {
   button.addEventListener("click", () => {
     const offset = button.dataset.carouselBtn === "next" ? 1 : -1;
-    const slides = button
-      .closest(".carousel-container")
-      .querySelector(".carousel");
+    const slides = button.closest(".carousel");
 
     const activeSlide = slides.querySelector("[data-active]");
     const nextSlide = slides.querySelector("[data-next]");
@@ -38,7 +36,7 @@ carouselButton.forEach((button) => {
 });
 
 //  CONTACT FORM SUBMISSION
-const contactForm = document.getElementById("contact-form");
-contactForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-});
+// const contactForm = document.getElementById("contact-form");
+// contactForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+// });
