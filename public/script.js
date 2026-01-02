@@ -3,6 +3,7 @@ const carouselButton = document.querySelectorAll("[data-carousel-btn]");
 
 carouselButton.forEach((button) => {
   button.addEventListener("click", () => {
+    event.preventDefault();
     const offset = button.dataset.carouselBtn === "next" ? 1 : -1;
     const slides = button
       .closest(".carousel-container")
@@ -37,8 +38,8 @@ carouselButton.forEach((button) => {
   });
 });
 
-//  CONTACT FORM SUBMISSION
-const contactForm = document.getElementById("contact-form");
-contactForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-});
+// //  CONTACT FORM SUBMISSION
+// const contactForm = document.getElementById("contact-form");
+// contactForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+// });

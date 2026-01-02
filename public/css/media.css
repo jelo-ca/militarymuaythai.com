@@ -154,6 +154,7 @@
 
     .overlay {
         width: 100%;
+        height: 100%;
     }
 
     .tagline {
@@ -226,16 +227,18 @@
     }
 
     .specialized-training-container {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 1rem;
     }
 
     .specialized-training-container h3 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .specialized-training-container h4 {
-        font-size: 1.2rem;
+        font-size: .75rem;
     }
 
     .specialized-training-container p {
