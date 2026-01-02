@@ -163,6 +163,9 @@
 
     .contact-container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .cta-btn {
@@ -231,6 +234,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
+        margin-top: 2rem;
     }
 
     .specialized-training-container h3 {
@@ -243,11 +247,16 @@
 
     .specialized-training-container p {
         font-size: 0.9rem;
+
     }
 
     /* Testimonials */
+    .carousel-container {
+        width: 100%;
+    }
+
     .carousel {
-        max-width: 100%;
+        width: 100%;
     }
 
     /* Other adjustments */

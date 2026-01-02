@@ -78,6 +78,10 @@ button {
   color: var(--red);
 }
 
+.gold {
+  color: var(--gold);
+}
+
 /* HERO SECTION */
 #hero {
   background: none;
@@ -239,11 +243,15 @@ button {
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .schedule-container li {
   margin-bottom: .5rem;
+}
+
+.schedule-container b {
+  color: var(--gold);
 }
 
 .vl {
@@ -270,6 +278,7 @@ button {
 .specialized-training-container h3 {
   font-size: 2rem;
   margin-bottom: 0;
+  color: var(--gold);
 }
 
 .specialized-training-container h4 {
@@ -316,7 +325,6 @@ button {
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
-
 }
 
 .testimonial[data-active],
