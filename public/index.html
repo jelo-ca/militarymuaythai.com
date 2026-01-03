@@ -136,10 +136,13 @@
             <h4>Email:</h4>
             <p>mtinfo@militarymuaythai.com</p>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" method="POST" action="/contact.php">
             <input type="text" placeholder="Name" required />
             <input type="email" placeholder="Email" required />
             <textarea placeholder="Message" required></textarea>
+            <!-- HONEYPOT ANTISPAM -->
+             <input name="website" autocomplete="off" tabindex="-1"
+              style="position:absolute;left:-9999px;" aria-hidden="true">
             <button type="submit">Send Message</button>
           </form>
         </div>
